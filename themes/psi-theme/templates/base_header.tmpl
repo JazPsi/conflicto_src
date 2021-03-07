@@ -1,0 +1,51 @@
+## -*- coding: utf-8 -*-
+<%namespace name="base" file="base_helper.tmpl" import="*"/>
+
+<%def name="html_header()">
+<section class="hero has-background is-large ">
+  <img src="/images/head.jpg" class="hero-background is-transparent" alt="">
+  <!-- Hero head: will stick at the top -->
+  <div class="hero-head">
+${html_navigation_links()}
+    <%def name="html_navigation_links()">
+
+        <nav class="navbar is-transparent is-fixed-top" id="myNAV">
+          <div class="container">
+            <div class="navbar-brand">
+              <a class="navbar-item" href="/">
+                <!--img src="/images/logo128x32.png" alt="Logo" width="128px" height="32px"-->
+                <h5 class="subtitle is-5">${blog_title}</h5>
+              </a>
+              <span class="navbar-burger" data-target="navbarMenuHeroA">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </div>
+    	       <div id="navbarMenuHeroA" class="navbar-menu">
+              <div class="navbar-end">
+              	%for url, text in navigation_links[lang]:
+    			         <a class="navbar-item" href="${url}">${text}</a>
+    		        %endfor
+              </div>
+            </div>
+          </div>
+        </nav>
+    </%def>
+  </div>
+${html_site_title()}
+  <!-- Hero content: will be in the middle -->
+  <%def name="html_site_title()">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title is-1">
+        ${blog_title}
+      </h1>
+      <h2 class="subtitle is-3">
+        ${title}
+      </h2>
+    </div>
+  </div>
+  </%def>
+</section>
+</%def>

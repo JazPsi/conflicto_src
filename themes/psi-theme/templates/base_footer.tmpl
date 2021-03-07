@@ -1,0 +1,16 @@
+## -*- coding: utf-8 -*-
+<%namespace name="base" file="base_helper.tmpl" import="*"/>
+
+<%def name="html_footer()">
+    %if content_footer:
+    <div class="footer-wrapper">
+        <footer class="footer" role="contentinfo footer">
+          <div class="content has-text-centered">
+            <p>${content_footer}</p>
+            <p><a href="https://bulma.io"><img src="/images/made-with-bulma.png" alt="Made with Bulma" width="128" height="24"></a></p>
+            ${template_hooks['page_footer']()}
+          </div>
+        </footer>
+    </div>
+    %endif
+</%def>
