@@ -140,8 +140,12 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
+        ("/", "Inicio"),
+        ("/categories/", "Categorias"),
         ("/archive.html", "Archivo"),
-        ("/categories/", "Etiquetas"),
+        ("/pages/servicios/", "Servicios"),
+        ("/pages/contacto/", "Contacto"),
+        ("/pages/sobre-mi/", "Sobre Mí"),
         ("/rss.xml", "Canal RSS"),
     ),
 }
@@ -154,7 +158,7 @@ NAVIGATION_ALT_LINKS = {
 }
 
 # Name of the theme to use.
-THEME = "bootblog4"
+THEME = "psi-theme"
 
 # A theme color. In default themes, it might be displayed by some browsers as
 # the browser UI color (eg. Chrome on Android). Other themes might also use it
@@ -266,7 +270,7 @@ TIMEZONE = "America/Buenos_Aires"
 # Date format used to display post dates. (translatable)
 # Used by babel.dates, CLDR style: http://cldr.unicode.org/translation/date-time-1/date-time
 # You can also use 'full', 'long', 'medium', or 'short'
-# DATE_FORMAT = 'yyyy-MM-dd HH:mm'
+DATE_FORMAT = 'dd-MM-yyyy'#'yyyy-MM-dd HH:mm'
 
 # Date format used to display post dates, if local dates are used. (translatable)
 # Used by Luxon: https://moment.github.io/luxon/docs/manual/formatting
@@ -933,7 +937,7 @@ IMAGE_FOLDERS = {'images': 'images'}
 # )
 
 # Show teasers (instead of full posts) in indexes? Defaults to False.
-# INDEX_TEASERS = False
+INDEX_TEASERS = True
 
 # HTML fragments with the Read more... links.
 # The following tags exist and are replaced for you:
@@ -949,7 +953,7 @@ IMAGE_FOLDERS = {'images': 'images'}
 # }}                            A literal } (U+007D RIGHT CURLY BRACKET)
 
 # 'Read more...' for the index page, if INDEX_TEASERS is True (translatable)
-INDEX_READ_MORE_LINK = '<p class="more"><a href="{link}">{read_more}…</a></p>'
+INDEX_READ_MORE_LINK = '<p class="more"><a href="{link}"><button class="button btn-leer">{read_more}…</a></button></p>'
 # 'Read more...' for the feeds, if FEED_TEASERS is True (translatable)
 FEED_READ_MORE_LINK = '<p><a href="{link}">{read_more}…</a> ({min_remaining_read})</p>'
 
@@ -976,7 +980,7 @@ LICENSE = ""
 
 # A small copyright notice for the page footer (in HTML).
 # (translatable)
-CONTENT_FOOTER = 'Contents &copy; {date}         <a href="mailto:{email}">{author}</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         {license}'
+CONTENT_FOOTER = 'Creado por <a href="mailto:{email}">{author}</a> &copy; {date} - Con la tecnología de <a href="https://getnikola.com" rel="nofollow">Nikola</a> - {license}'
 
 # Things that will be passed to CONTENT_FOOTER.format().  This is done
 # for translatability, as dicts are not formattable.  Nikola will
@@ -1162,14 +1166,14 @@ MARKDOWN_EXTENSIONS = ['markdown.extensions.fenced_code', 'markdown.extensions.c
 # """
 
 # Show link to source for the posts?
-# SHOW_SOURCELINK = True
+SHOW_SOURCELINK = False
 # Copy the source files for your pages?
 # Setting it to False implies SHOW_SOURCELINK = False
 # COPY_SOURCES = True
 
 # Modify the number of Post per Index Page
 # Defaults to 10
-# INDEX_DISPLAY_POST_COUNT = 10
+INDEX_DISPLAY_POST_COUNT = 5
 
 # By default, Nikola generates RSS files for the website and for tags, and
 # links to it.  Set this to False to disable everything RSS-related.
@@ -1338,7 +1342,7 @@ MARKDOWN_EXTENSIONS = ['markdown.extensions.fenced_code', 'markdown.extensions.c
 # Bundle JS and CSS into single files to make site loading faster in a HTTP/1.1
 # environment but is not recommended for HTTP/2.0 when caching is used.
 # Defaults to True.
-# USE_BUNDLES = True
+USE_BUNDLES = False
 
 # Plugins you don't want to use. Be careful :-)
 # DISABLED_PLUGINS = ["render_galleries"]
