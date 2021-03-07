@@ -1,6 +1,6 @@
 [Theme]
 engine = mako
-parent = hpstr
+parent = base
 author = Marco Romero
 author_url = https://github.com/Darkfoe703
 based_on = HPSTR for Nikola <https://github.com/getnikola/nikola-themes/tree/master/v7/hpstr/>
