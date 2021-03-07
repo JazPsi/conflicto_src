@@ -1,0 +1,15 @@
+
+# Created by https://www.toptal.com/developers/gitignore/api/nikola
+# Edit at https://www.toptal.com/developers/gitignore?templates=nikola
+
+### Nikola ###
+# gitignore template for Nikola static site generator
+# website: https://getnikola.com/
+
+.doit.db
+*.py[cod]
+cache/
+output/
+_pycache_/
+
+# End of https://www.toptal.com/developers/gitignore/api/nikola
