@@ -1,6 +1,6 @@
 .. title: Algunos aspectos relacionados a la práctica del psicoanálisis y al trabajo de los analistas
 .. slug: apectos-relacionados
-.. date: 2021-03-07 20:00:00 UTC-03:00
+.. date: 2021-03-06 20:00:00 UTC-03:00
 .. author: Jazmín Vivas Cruz
 .. description: Aspectos relacionados a la práctica del psicoanálisis 
 .. category: Psicoanálisis
