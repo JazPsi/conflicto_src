@@ -12,9 +12,57 @@ ${template_hooks['extra_head']()}
 <body id="post-index" class="feature">
 <a href="#content" class="sr-only sr-only-focusable">${messages("Skip to main content")}</a>
     ${header.html_header()}
-    <div id="main" role="main">
-            <%block name="content"></%block>
+    %if title != 'Sobre Mí':
+      %if title != 'Archivo':
+    <div class="columns" style="max-width: 1200px;">
+      <div class="columns is-two-thirds">
+      %endif
+    %endif
+      %if title != 'Sobre Mí':
+        %if title != 'Archivo':
+        <div id="main" role="main">
+        %else:
+        <div id="main" role="main" style="max-width: 1200px;">
+        %endif
+      %else:
+        <div id="main" role="main" style="max-width: 1200px;">
+      %endif
+                <%block name="content"></%block>
+        </div>
+    %if title != 'Sobre Mí':
+      %if title != 'Archivo':
+      </div>
+
+        <div id="aside-bar" class="column">
+          <div class="card aside-card">
+            <div class="card-image">
+              <figure class="image is-square">
+                <img id="img-aside" src="${blog_url}images/logo500.png" alt="Placeholder image">
+              </figure>
+            </div>
+            <div class="card-content">
+              <h4></h4>
+              <p>
+              <strong>Conflicto Psíquico</strong> es un lugar de difusión de Psicología, pero sobre todo es un espacio para abrir lugar a la palabra. El propósito principal es prevenir en Salud Mental desde el psicoanálisis, la psicología comunitaria y con perspectiva de género. ¿Porqué un espacio para abrir lugar a la palabra? Transmitir conocimiento acerca de salud mental, no solo trabaja la prevención en este campo, si no, que da lugar a la reflexión, rompiendo estereotipos y cuestionando paradigmas establecidos. Dar lugar a la palabra significa esto, comenzar a hablar e intercambiar en las distintas comunidades sobre la importancia de la salud mental.
+              </p>
+              <div class="buttons botonera-side mt-4">
+      				  <button class="button is-large servicios"><a href="/pages/sobre-mi/">Saber más</a></button>
+      				</div>
+            </div>
+          </div>
+
+          <div class="card aside-card">
+
+          </div>
+        </div>
+
     </div>
+      %endif
+    %endif
+<a href="https://wa.link/7xp0sj" target="_blank" class="btn-flotante">
+  <center><i class="fab fa-whatsapp-square"></i></center>
+  Contactame
+</a>
     ${footer.html_footer()}
     ${body_end}
     ${template_hooks['body_end']()}

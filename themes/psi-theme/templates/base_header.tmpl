@@ -42,7 +42,11 @@ ${html_site_title()}
         ${blog_title}
       </h1>
       <h2 class="subtitle is-3">
-        ${title}
+        %if blog_title == title:
+          ${blog_author}
+        %else:
+          ${title}
+        %endif
       </h2>
     </div>
   </div>
