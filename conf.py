@@ -692,6 +692,7 @@ GITHUB_COMMIT_SOURCE = True
 # If you don't use an absolute path, it will be considered as relative
 # to the location of conf.py
 OUTPUT_FOLDER = '/mnt/Datos/conflicto_web'
+#OUTPUT_FOLDER = 'output'
 
 # where the "cache" of partial generated content should be located
 # default: 'cache'
