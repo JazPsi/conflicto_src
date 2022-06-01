@@ -3,7 +3,7 @@
 
 <%def name="html_header()">
 <section class="hero has-background is-large ">
-  <img src="/images/head.jpg" class="hero-background is-transparent" alt="">
+  <img src="/images/head.svg" class="hero-background is-transparent" alt="">
   <!-- Hero head: will stick at the top -->
   <div class="hero-head">
 ${html_navigation_links()}
@@ -13,7 +13,7 @@ ${html_navigation_links()}
           <div class="container">
             <div class="navbar-brand">
               <a class="navbar-item" href="/">
-                <!--img src="/images/logo128x32.png" alt="Logo" width="128px" height="32px"-->
+                <!--- img src="/images/logo500_.png" alt="Logo" width="128px" height="32px"--->
                 <h5 class="subtitle is-5">${blog_title}</h5>
               </a>
               <span class="navbar-burger" data-target="navbarMenuHeroA">
@@ -38,6 +38,7 @@ ${html_site_title()}
   <%def name="html_site_title()">
   <div class="hero-body">
     <div class="container has-text-centered">
+    <img class="hero-logo" src="/images/logo500_.png" alt="Logo">
       <h1 class="title is-1">
         ${blog_title}
       </h1>
